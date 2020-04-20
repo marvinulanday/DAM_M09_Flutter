@@ -1,16 +1,18 @@
-# flutterapp
+# Flutter App
 
-A new Flutter application.
+Flutter App con peticiones a una API de Marvel.
 
-## Getting Started
+## Índice
 
-This project is a starting point for a Flutter application.
+* [Autores](#autores)
+* [Descripción](#descripción)
 
-A few resources to get you started if this is your first Flutter project:
+## Autores
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+- Marvin Ulanday Saludo
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Descripción
+
+La aplicación consiste en un Home que muestra una lista de caracteres que al clicar en uno de ellos mostrará su descripción correspondiente. En caso de que no tenga mostrará que no tiene ninguna.
+
+La aplicación utiliza la arquitectura **MVVM**.
