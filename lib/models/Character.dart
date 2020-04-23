@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutterapp/services/WebService.dart';
 
+// Modelo Character con los atributos correspondientes
 class Character extends ChangeNotifier {
   final int id;
   final String name;
@@ -10,6 +11,7 @@ class Character extends ChangeNotifier {
 
   Character({this.id, this.name, this.description, this.image, this.imageDetail});
 
+  //Cogerá los datos del json y los pondrá en el atributo correspondiente
   factory Character.fromJson(Map<String, dynamic> json) {
     return Character(
       id: json['id'],
@@ -20,6 +22,7 @@ class Character extends ChangeNotifier {
     );
   }
 
+  // Pedirá de nuevo los datos del Character
   Future<Character> getCharacterDetails() async {
     await Webservice.getCharacter(this);
     notifyListeners();

@@ -15,8 +15,15 @@ class CharacterDetailsPage extends StatelessWidget {
     return ChangeNotifierProvider(
       create: (ctx) => Character(id: id, name: name, imageDetail: image),
       child: Scaffold(
+        backgroundColor: Colors.white,
         appBar: AppBar(
-          title: Text(name),
+          backgroundColor: Color(0xFFC22E28),
+          title: Text(name,
+            style: TextStyle(
+              fontFamily: 'Bebas',
+              fontSize: 21,
+            ),
+          ),
         ),
         body: Column(
           children: <Widget>[
@@ -28,10 +35,7 @@ class CharacterDetailsPage extends StatelessWidget {
                     Center(
                       child: Hero(
                         tag: name,
-                        child: FittedBox(
-                          child: Image.network(image, fit: BoxFit.contain),
-                          fit: BoxFit.fill,
-                        ),
+                        child: Image.network(image, fit: BoxFit.contain),
                       ),
                     ),
                   ],
@@ -46,21 +50,33 @@ class CharacterDetailsPage extends StatelessWidget {
                     return Center(child: CircularProgressIndicator());
                   } else {
                     return Container(
-                        child: Stack(
+                      color: Colors.black,
+                      child: Card(
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.start,
                           children: <Widget>[
-                            Positioned(
-                              child: Container(
-                                padding: EdgeInsets.all(10),
-                                child: Text(
-                                  character.description,
-                                  style: TextStyle(
-                                    fontSize: 15,
-                                  ),
+                            Text(''),
+                            Text(
+                              'DESCRIPTION',
+                              style: TextStyle(
+                                fontFamily: 'Marvel',
+                                fontSize: 18,
+                              ),
+                            ),
+                            Container(
+                              padding: EdgeInsets.all(10),
+                              child: Text(
+                                character.description,
+                                textAlign: TextAlign.justify,
+                                style: TextStyle(
+                                  fontFamily: 'Bebas',
+                                  fontSize: 16,
                                 ),
                               ),
-                            )
+                            ),
                           ],
                         ),
+                      ),
                     );
                   }
                 },

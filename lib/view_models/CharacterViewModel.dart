@@ -1,5 +1,6 @@
 import 'package:flutterapp/models/Character.dart';
 
+/// Modelo para la arquitectura de MVVM
 class CharacterViewModel {
 
   final Character character;
