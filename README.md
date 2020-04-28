@@ -1,6 +1,4 @@
-# Flutter App
-
-Flutter App con peticiones a una API de Marvel.
+# Flutter App con Marvel API
 
 ## Índice
 
